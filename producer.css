@@ -1,0 +1,83 @@
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 285px;
+    height: 300px;
+    background-color: #07023d;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.cover {
+    top: 0;
+    position: absolute;
+    background-color: #07023d;
+    outline: .1em solid #fcdf02;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-83deg);
+    -ms-transform: rotatey(-83deg);
+    transform: rotatey(-83deg);
+}
+
+p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.book span {
+    margin-bottom: 10px;
+}
+
+.content {
+    margin-left: 15%;
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    margin-right: -200px;
+    flex-wrap: wrap;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 10px;
+}

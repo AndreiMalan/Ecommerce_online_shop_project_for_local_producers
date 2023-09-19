@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="home.css">
+    <script>
+        window.onload = function () {
+            var bgImage = document.getElementById('background-image');
+            var message = document.getElementById('message');
+            bgImage.classList.add('loaded');
+            message.classList.add('loaded');
+        };
+    </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html"><img src="imagini/background.png" width='180px' height="85px"></a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cont_personal.php">Contul meu</a></li>
+            <li><a href="categorii.php">Categorii</a></li>
+            <li><a href="producatori.php">Producatori</a></li>
+            <li><a href="magazin.php">Magazin</a></li>
+            <li><a href="cos.php">Cos</a></li>
+            <li><a href="lasa_recenzie.php">Lasa recenzie</a></li>
+            <li><a href="vezi_recenzie.php">Vezi recenzii</a></li>
+            <li><a href="logout-user.php">LogOut</a></li>
+        </ul>
+    </nav>
+    <div id="background-image">
+        <div id="message">Bine ati venit la Naturino!</div>
+        <footer>
+            <span>Author: Andrei Malan, 2023</span>
+            <span>Contact: 0735966045 sau naturino@gmail.com</span>
+        </footer>
+    </div>
+
+</body>
+
+</html>

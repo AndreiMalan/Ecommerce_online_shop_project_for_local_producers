@@ -1,0 +1,234 @@
+.card1 {
+    width: 250px;
+    height: 280px;
+    position: relative;
+    outline: .1em solid #fcdf02;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background: #07023d;
+    background: linear-gradient(to top, #14083f 0%, #140949 100%);
+    overflow: hidden;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+.card1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    background-color: rgba(80, 64, 44, 0);
+    transition: background-color 1s;
+}
+
+.card1-info {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding: 3.5em 1.5em 1.5em;
+    text-align: center;
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    z-index: 1;
+}
+
+.card1-bio {
+    padding: 0.3em 1.2em;
+    text-align: center;
+    transform: translate(100%, 40%);
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    opacity: 0;
+    z-index: 1;
+}
+
+.card1-bio p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+.card2 {
+    width: 450px;
+    height: 500px;
+    position: relative;
+    outline: .1em solid #fcdf02;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background: #07023d;
+    background: linear-gradient(to top, #14083f 0%, #140949 100%);
+    overflow: hidden;
+    border-radius: 10px;
+    margin-right: 30px;
+    margin: 0 auto;
+}
+
+.card2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    background-color: rgba(80, 64, 44, 0);
+    transition: background-color 1s;
+}
+
+.card2-info {
+    position: absolute;
+    width: 100%;
+    padding: 3.5em 1.5em 1.5em;
+    text-align: center;
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    z-index: 1;
+    font-size: large;
+}
+
+.title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    margin: 0 auto 4%;
+    background-color: #f6f5f5;
+}
+
+.subtitle {
+    font-weight: 400;
+    line-height: 1em;
+}
+
+.card1:hover::before {
+    background-color: rgba(80, 64, 44, 0.25);
+}
+
+.card1:hover .card1-info {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.card1:hover .card1-bio {
+    transform: translate(0, 40%);
+    opacity: 1;
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 0.5s ease-in-out;
+}
+
+.card_recenzie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    width: 400px;
+    flex-direction: column;
+    gap: 85px;
+    background: #08388a;
+    box-shadow: 4px 4px 4px #060040,
+        -4px -4px 7px #fefefe;
+    border-radius: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.login {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    font-weight: bold;
+    font-size: large;
+}
+
+.inputBox {
+    position: relative;
+    width: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.inputBox textarea {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1em;
+    background: transparent;
+    border-left: 2px solid #fbfbfb;
+    border-bottom: 2px solid #ffffff;
+    transition: 0.1s;
+    border-bottom-left-radius: 8px;
+    position: relative;
+}
+
+.inputBox span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-100%) translateY(0%);
+    padding: 10px;
+    pointer-events: none;
+    font-size: 12px;
+    color: #fafafa;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    width: 40%;
+    text-align: center;
+}
+
+.inputBox textarea:valid~span,
+.inputBox textarea:focus~span {
+    transform: translateY(-95%) translateX(-5%);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: #000;
+    letter-spacing: 0.2em;
+    color: #fff;
+    border: 2px;
+}
+
+.enter {
+    height: 45px;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 1em;
+}
+
+.enter:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
